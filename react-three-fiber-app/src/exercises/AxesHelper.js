@@ -1,6 +1,5 @@
-import { Canvas, useFrame } from '@react-three/fiber';
+import { useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
-import './App.css'
 
 const Box = () => {
   
@@ -20,14 +19,13 @@ const Box = () => {
   );
 }
 
-const App = () => {
+const AxesHelper = () => {
   return (
-    <div style={{height: '100vh', width: '100vw'}}>
-      <Canvas style={{backgroundColor: 'black'}}>
-        <Box />
-      </Canvas>
-    </div>
-  );
+    <>
+      <Box />
+      <axesHelper />
+    </>
+  )
 }
 
-export default App;
+export default AxesHelper;
