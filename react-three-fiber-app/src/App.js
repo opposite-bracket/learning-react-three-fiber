@@ -5,7 +5,6 @@ import {
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import { Canvas } from '@react-three/fiber';
 import SimpleBox from "./exercises/SimpleBox";
 import AxesHelper from "./exercises/AxesHelper";
 import NavBar from "./navigation/NavBar";
@@ -20,14 +19,10 @@ const App = () => {
             Hello
           </Route>
           <Route exact path="/examples/simple-box">
-            <Canvas style={{backgroundColor: 'black'}}>
-              <SimpleBox />
-            </Canvas>
+            <SimpleBox />
           </Route>
           <Route path="/examples/axes-helper">
-            <Canvas style={{backgroundColor: 'black'}}>
-              <AxesHelper />
-            </Canvas>
+            <AxesHelper />
           </Route>
         </Switch>
       </div>

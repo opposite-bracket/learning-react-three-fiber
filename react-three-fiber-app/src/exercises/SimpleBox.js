@@ -1,4 +1,4 @@
-import { useFrame } from '@react-three/fiber';
+import { Canvas, useFrame } from '@react-three/fiber';
 import { useRef } from 'react';
 
 const Box = () => {
@@ -12,10 +12,12 @@ const Box = () => {
   });
 
   return (
-    <mesh ref={ref}>
-      <boxBufferGeometry />
-      <meshBasicMaterial color='blue' />
-    </mesh>
+    <Canvas style={{backgroundColor: 'black'}}>
+      <mesh ref={ref}>
+        <boxBufferGeometry />
+        <meshBasicMaterial color='blue' />
+      </mesh>
+    </Canvas>
   );
 }
 
